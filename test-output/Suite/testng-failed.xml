@@ -4,21 +4,21 @@
   <test thread-count="5" name="Test(failed)">
     <groups>
       <run>
-        <include name="SmokeSuite"/>
+        <include name="regionalRegression"/>
       </run>
     </groups>
     <classes>
-      <class name="satteliteInfo.ContactTests.TC_01Test">
+      <class name="satteliteInfo.OrganizationTests.TC_05Test">
         <methods>
           <include name="asConfig"/>
           <include name="bcConfig"/>
           <include name="amConfig"/>
           <include name="bsConfig"/>
           <include name="bmConfig"/>
-          <include name="TC_01"/>
+          <include name="TC_04Test" invocation-numbers="0"/>
           <include name="acConfig"/>
         </methods>
-      </class> <!-- satteliteInfo.ContactTests.TC_01Test -->
+      </class> <!-- satteliteInfo.OrganizationTests.TC_05Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

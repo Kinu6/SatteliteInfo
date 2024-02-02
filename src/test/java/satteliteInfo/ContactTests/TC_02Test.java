@@ -2,6 +2,7 @@ package satteliteInfo.ContactTests;
 
 import java.io.IOException;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import SatteliteInfo.GenericUtilities.BaseClass;
 import SatteliteInfo.ObjectRepository.ContactsInfoPage;
@@ -12,9 +13,12 @@ import SatteliteInfo.ObjectRepository.HomePage;
 import SatteliteInfo.ObjectRepository.OrganizationInfoPage;
 import SatteliteInfo.ObjectRepository.OrganizationPage;
 
+
+@Listeners(SatteliteInfo.GenericUtilities.ListernersImplementation.class)
+
 public class TC_02Test extends BaseClass {
 
-	@Test
+	@Test(groups = {"regionalRegression"})
 	public void TC_02Test() throws IOException {
 
 		String ORGNAME = eUtil.readDataFromExcelSheet("Contact", 4, 2) + jUtil.getRandomNumber();

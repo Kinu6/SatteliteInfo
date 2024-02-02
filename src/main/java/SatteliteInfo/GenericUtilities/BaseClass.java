@@ -14,7 +14,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import org.testng.xml.XmlTest;
 
 import com.beust.jcommander.Parameter;
 
@@ -22,28 +25,28 @@ import SatteliteInfo.ObjectRepository.HomePage;
 import SatteliteInfo.ObjectRepository.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+//@Listeners(SatteliteInfo.GenericUtilities.ListernersImplementation.class)
+
 public class BaseClass {
 	// Step 1: Create Object of Generic Utilities
 	public ExcelFileUtility eUtil = new ExcelFileUtility();
 	public PropertyFileUtility pUtil = new PropertyFileUtility();
 	public JavaUtility jUtil = new JavaUtility();
 	public WebDriverUtility wUtil = new WebDriverUtility();
-
+	
 	public WebDriver driver = null;
-
 	public static WebDriver sDriver;
 
-	@BeforeSuite(groups ="SmokeSuite")
+	@BeforeSuite(groups={"smokeSuite","regionalRegression"})
 	public void bsConfig() {
 		System.out.println("----- database connection successful -----");
 	}
 	
 	/*@Parameters("browser")
-    @BeforeTest  //Parallel Execution */
+	@BeforeTest */ 
 	
-	@BeforeClass(alwaysRun = true )	
+	@BeforeClass(groups={"smokeSuite","regionalRegression"})
     public void bcConfig(/*String BROWSER*/) throws IOException {
-
 		String URL = pUtil.readDataFromPropertyFile("url");
 		String BROWSER = pUtil.readDataFromPropertyFile("browser");
 
@@ -70,7 +73,7 @@ public class BaseClass {
 
 	}
 
-	@BeforeMethod(groups = "SmokeSuite")
+	@BeforeMethod(groups={"smokeSuite","regionalRegression"}) 
 	public void bmConfig() throws IOException {
 		String USERNAME = pUtil.readDataFromPropertyFile("username");
 		String PASSWORD = pUtil.readDataFromPropertyFile("password");
@@ -80,22 +83,23 @@ public class BaseClass {
 		System.out.println("--- Login to APP successful ---");
 	}
 
-	@AfterMethod(groups = "SmokeSuite")
+	
+	@AfterMethod(groups={"smokeSuite","regionalRegression"}) //@Test(retryAnalyzer = SatteliteInfo.GenericUtilities.RetryAnalyserImplementation.class)
+	
 	public void amConfig() {
 		HomePage hp = new HomePage(driver);
 		hp.logoutOfApp(driver);
-
 		System.out.println("--- logout of APP successful ---");
 	}
     
-	//@AfterTest
-	@AfterClass(groups = "SmokeSuite")
+	//@AfterTest for DP and Cross Browser
+	@AfterClass(groups={"smokeSuite","regionalRegression"})
 	public void acConfig() {
 		driver.quit();
 		System.out.println("--- Browser closed ---");
 	}
 
-	@AfterSuite(groups = "SmokeSuite")
+	@AfterSuite(groups={"smokeSuite","regionalRegression"})
 	public void asConfig() {
 		System.out.println("----- database closed successfully -----");
 	}
