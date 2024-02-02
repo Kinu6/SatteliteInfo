@@ -162,7 +162,7 @@ public class WebDriverUtility {
 	 * @param driver
 	 */
 	public void waitForPageLoad(WebDriver driver) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	}
 
 	/**
@@ -172,7 +172,7 @@ public class WebDriverUtility {
 	 * @param element
 	 */
 	public void waitForElementToBeVisisble(WebDriver driver, WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
@@ -183,7 +183,7 @@ public class WebDriverUtility {
 	 * @param element
 	 */
 	public void waitForElementToBeClickabale(WebDriver driver, WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 

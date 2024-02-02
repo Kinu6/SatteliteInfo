@@ -12,7 +12,8 @@ import SatteliteInfo.ObjectRepository.OrganizationInfoPage;
 import SatteliteInfo.ObjectRepository.OrganizationPage;
 
 public class TC_06Test extends BaseClass {
-	@Test
+	
+	@Test(groups = "smokeSuite")
 	public void TC_06Test() throws IOException {
 
 		String ORGNAME = eUtil.readDataFromExcelSheet("Organization", 7, 2) + jUtil.getRandomNumber();
@@ -23,7 +24,8 @@ public class TC_06Test extends BaseClass {
 		hp.getOrganizationsLnk().click();
 
 		OrganizationPage cop = new OrganizationPage(driver);
-		wUtil.waitForPageLoad(driver);
+		wUtil.waitForElementToBeClickabale(driver, cop.getCreateOrganizationsIcon());
+		wUtil.waitForElementToBeVisisble(driver, cop.getCreateOrganizationsIcon());
 		cop.getCreateOrganizationsIcon().click();
 
 		CreateNewOrganisationPage cnop = new CreateNewOrganisationPage(driver);
@@ -44,5 +46,10 @@ public class TC_06Test extends BaseClass {
 
 		Assert.assertEquals(HD_TEXT.contains(ORGNAME), true);
 
+	}
+	
+	@Test
+	public void demoTC_06() {
+		System.out.println("Hi 06");
 	}
 }

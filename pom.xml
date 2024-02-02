@@ -62,7 +62,6 @@
 			<version>5.0.9</version>
 		</dependency>
 	</dependencies>
-	
 	<profiles>
 		<profile>
 			<id>SmokeSuite</id> <!-- Specify a unique identifier for your profile -->

@@ -1,5 +1,6 @@
 package satteliteInfo.OrganizationTests;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import SatteliteInfo.GenericUtilities.BaseClass;
 import SatteliteInfo.ObjectRepository.CreateNewOrganisationPage;
@@ -10,20 +11,24 @@ import SatteliteInfo.ObjectRepository.OrganizationPage;
 import java.io.IOException;
 import org.testng.Assert;
 
+@Listeners(SatteliteInfo.GenericUtilities.ListernersImplementation.class)
 public class TC_04Test extends BaseClass {
-	@Test()
-	public void TC_04Test() throws IOException {
+	@Test(retryAnalyzer = SatteliteInfo.GenericUtilities.RetryAnalyserImplementation.class)
+	public void TC_04Test() throws IOException, InterruptedException {
 
 		String ORGNAME = eUtil.readDataFromExcelSheet("Organization", 1, 2) + jUtil.getRandomNumber();
+		
 		HomePage hp = new HomePage(driver);
-		wUtil.waitForElementToBeVisisble(driver, hp.getOrganizationsLnk());
 		hp.getOrganizationsLnk().click();
-
+        
 		OrganizationPage cop = new OrganizationPage(driver);
-		wUtil.waitForElementToBeVisisble(driver, cop.getCreateOrganizationsIcon());
+		wUtil.waitForElementToBeVisisble(driver,  cop.getCreateOrganizationsIcon());
+		wUtil.waitForElementToBeClickabale(driver, cop.getCreateOrganizationsIcon());
 		cop.getCreateOrganizationsIcon().click();
-
+        
+		Thread.sleep(2000);
 		CreateNewOrganisationPage cno = new CreateNewOrganisationPage(driver);
+		wUtil.waitForElementToBeClickabale(driver, cno.getOrgNameTxt());
 		cno.getOrgNameTxt().sendKeys(ORGNAME);
 		cno.getSaveBtn().click();
 

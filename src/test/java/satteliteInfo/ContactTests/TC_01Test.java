@@ -14,32 +14,42 @@ import SatteliteInfo.ObjectRepository.HomePage;
 @Listeners(SatteliteInfo.GenericUtilities.ListernersImplementation.class)
 
 public class TC_01Test extends BaseClass {
-	@Test(groups = "SmokeSuite")
-	public void TC_01() throws IOException {
+	
+	@Test()
+	public void TC_01() throws IOException, InterruptedException {
 
 		String LASTNAME = eUtil.readDataFromExcelSheet("Contact", 1, 2);
 
 		HomePage hp = new HomePage(driver);
-		wUtil.waitForPageLoad(driver);
 		hp.getContactsLnk().click();
-        Reporter.log("Naviated to contacts link");
+        
+		Thread.sleep(200);
+		
+		Reporter.log("Naviated to contacts link");
 		ContactsPage ccp = new ContactsPage(driver);
-		wUtil.waitForPageLoad(driver);
+		wUtil.waitForElementToBeVisisble(driver, ccp.getCreateNewIcon());;
+		wUtil.waitForElementToBeClickabale(driver, ccp.getCreateNewIcon());
 		ccp.getCreateNewIcon().click();
+		
 		Reporter.log("Naviated to create new link");
 		CreateNewContactPage cncp = new CreateNewContactPage(driver);
 		wUtil.waitForPageLoad(driver);
 		cncp.getLastNameTxt().sendKeys(LASTNAME);
 		cncp.getSaveBtn().click();
+		
 		Reporter.log("Naviated to last name",true);
+		
 		ContactsInfoPage cip = new ContactsInfoPage(driver);
-        Assert.fail();
+       
 		String orginfo = cip.getContactHeader();
 		Assert.assertEquals(orginfo.contains(LASTNAME), true);
 
 	}
-	@Test
+	
+	/*@Test(retryAnalyzer =SatteliteInfo.GenericUtilities.RetryAnalyserImplementation.class )
 	public void demoTest() {
+		Assert.fail();
 		System.out.println("IMPACTED AREAS");
-	}
+		
+	}*/
 }
