@@ -23,7 +23,7 @@ public class TC_01Test extends BaseClass {
 		HomePage hp = new HomePage(driver);
 		hp.getContactsLnk().click();
         
-		Thread.sleep(200);
+		Thread.sleep(2000);
 		
 		Reporter.log("Naviated to contacts link");
 		ContactsPage ccp = new ContactsPage(driver);
