@@ -12,7 +12,7 @@ import SatteliteInfo.ObjectRepository.HomePage;
 
 public class TC_03Test extends BaseClass {
 
-	@Test
+	@Test (groups = "smokeSuite")
 	public void TC_03Test() throws IOException, InterruptedException {
 
 		String LASTNAME = eUtil.readDataFromExcelSheet("Contact", 7, 2);
@@ -25,6 +25,7 @@ public class TC_03Test extends BaseClass {
 		wUtil.waitForPageLoad(driver);
 		ccp.getCreateNewIcon().click();
         
+        wUtil.waitForElementToBeVisisble(driver, ccp.getCreateNewIcon());
         
 		CreateNewContactPage cncp = new CreateNewContactPage(driver);
 		wUtil.waitForPageLoad(driver);

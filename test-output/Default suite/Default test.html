@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jan 20 14:33:08 IST 2024</td>
+<td>Started on:</td><td>Fri Feb 02 13:14:40 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>37 seconds (37048 ms)</td>
+<tr><td>Total time:</td><td>90 seconds (90470 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,20 +75,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='satteliteInfo.ContactTests.TC_01Test.TC_01()'><b>TC_01</b><br>Test class: satteliteInfo.ContactTests.TC_01Test<br/>
-<a href="#Output-1914285129" onClick='toggleBox("Output-1914285129", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1914285129" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1914285129">
-Naviated to contacts link<br/>
-Naviated to create new link<br/>
-Naviated to last name<br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.fail(Assert.java:106)
-	at satteliteInfo.ContactTests.TC_01Test.TC_01(TC_01Test.java:36)
+<td title='satteliteInfo.OrganizationTests.TC_06Test.TC_06Test()'><b>TC_06Test</b><br>Test class: satteliteInfo.OrganizationTests.TC_06Test</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name=&apos;accountname&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e52262b9-0a87-45bd-88c1-77095fe336ab, findElement {using=name, value=accountname}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0, moz:accessibilityChecks: false, moz:buildID: 20240118164516, moz:debuggerAddress: 127.0.0.1:25136, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14964, moz:profile: C:\WINDOWS\TEMP\rust_mozpro..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:25136/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e52262b9-0a87-45bd-88c1-77095fe336ab
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
+	at satteliteInfo.OrganizationTests.TC_06Test.TC_06Test(TC_06Test.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,11 +132,35 @@ Naviated to last name<br/>
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1914285129", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1914285129'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.fail(Assert.java:106)
-	at satteliteInfo.ContactTests.TC_01Test.TC_01(TC_01Test.java:36)
+</pre></div><a href='#' onClick='toggleBox("stack-trace530528285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace530528285'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name=&apos;accountname&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e52262b9-0a87-45bd-88c1-77095fe336ab, findElement {using=name, value=accountname}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0, moz:accessibilityChecks: false, moz:buildID: 20240118164516, moz:debuggerAddress: 127.0.0.1:25136, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14964, moz:profile: C:\WINDOWS\TEMP\rust_mozpro..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:25136/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e52262b9-0a87-45bd-88c1-77095fe336ab
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
+	at satteliteInfo.OrganizationTests.TC_06Test.TC_06Test(TC_06Test.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -151,8 +190,8 @@ Naviated to last name<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>12</td>
-<td>satteliteInfo.ContactTests.TC_01Test@5b03b9fe</td></tr>
+<td>51</td>
+<td>satteliteInfo.OrganizationTests.TC_06Test@5a56cdac</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -162,10 +201,10 @@ Naviated to last name<br/>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='satteliteInfo.ContactTests.TC_01Test.demoTest()'><b>demoTest</b><br>Test class: satteliteInfo.ContactTests.TC_01Test</td>
+<td title='satteliteInfo.OrganizationTests.TC_06Test.demoTC_06()'><b>demoTC_06</b><br>Test class: satteliteInfo.OrganizationTests.TC_06Test</td>
 <td></td>
 <td>0</td>
-<td>satteliteInfo.ContactTests.TC_01Test@5b03b9fe</td></tr>
+<td>satteliteInfo.OrganizationTests.TC_06Test@5a56cdac</td></tr>
 </table><p>
 </body>
 </html>

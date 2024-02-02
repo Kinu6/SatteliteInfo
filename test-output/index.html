@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Windows\Temp\testng-eclipse--1717731554\testng-customsuite.xml</span>
+                    <span>C:\Windows\Temp\testng-eclipse--113235711\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="satteliteInfo.ContactTests.TC_01Test" class="method navigator-link" hash-for-method="TC_01">TC_01</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="satteliteInfo.OrganizationTests.TC_06Test" class="method navigator-link" hash-for-method="TC_06Test">TC_06Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -118,7 +118,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="satteliteInfo.ContactTests.TC_01Test" class="method navigator-link" hash-for-method="demoTest">demoTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="satteliteInfo.OrganizationTests.TC_06Test" class="method navigator-link" hash-for-method="demoTC_06">demoTC_06</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -136,18 +136,42 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">satteliteInfo.ContactTests.TC_01Test</span>
+              <span class="class-name">satteliteInfo.OrganizationTests.TC_06Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_01">
-                  </a> <!-- TC_01 -->
-                  <span class="method-name">TC_01</span>
-                  <div class="stack-trace">java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.fail(Assert.java:106)
-	at satteliteInfo.ContactTests.TC_01Test.TC_01(TC_01Test.java:36)
+                  <a name="TC_06Test">
+                  </a> <!-- TC_06Test -->
+                  <span class="method-name">TC_06Test</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name=&apos;accountname&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e52262b9-0a87-45bd-88c1-77095fe336ab, findElement {using=name, value=accountname}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0, moz:accessibilityChecks: false, moz:buildID: 20240118164516, moz:debuggerAddress: 127.0.0.1:25136, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14964, moz:profile: C:\WINDOWS\TEMP\rust_mozpro..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:25136/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e52262b9-0a87-45bd-88c1-77095fe336ab
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
+	at satteliteInfo.OrganizationTests.TC_06Test.TC_06Test(TC_06Test.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -185,14 +209,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">satteliteInfo.ContactTests.TC_01Test</span>
+              <span class="class-name">satteliteInfo.OrganizationTests.TC_06Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="demoTest">
-                  </a> <!-- demoTest -->
-                  <span class="method-name">demoTest</span>
+                  <a name="demoTC_06">
+                  </a> <!-- demoTC_06 -->
+                  <span class="method-name">demoTC_06</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -200,7 +224,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Windows\Temp\testng-eclipse--1717731554\testng-customsuite.xml</span>
+            <span class="header-content">C:\Windows\Temp\testng-eclipse--113235711\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -209,7 +233,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;satteliteInfo.ContactTests.TC_01Test&quot;/&gt;
+      &lt;class name=&quot;satteliteInfo.OrganizationTests.TC_06Test&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -234,10 +258,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">SmokeSuite</span>
+              <span class="test-group-name">smokeSuite</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">TC_01</span>
+                <span class="method-in-group-name">TC_06Test</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -259,18 +283,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_01')
-data.setCell(0, 2, 'satteliteInfo.ContactTests.TC_01Test')
-data.setCell(0, 3, 12854);
+data.setCell(0, 1, 'TC_06Test')
+data.setCell(0, 2, 'satteliteInfo.OrganizationTests.TC_06Test')
+data.setCell(0, 3, 51068);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'demoTest')
-data.setCell(1, 2, 'satteliteInfo.ContactTests.TC_01Test')
-data.setCell(1, 3, 2);
+data.setCell(1, 1, 'demoTC_06')
+data.setCell(1, 2, 'satteliteInfo.OrganizationTests.TC_06Test')
+data.setCell(1, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 51 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -281,14 +305,6 @@ return data;
             <span class="header-content">Reporter output for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">TC_01</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Naviated to contacts link</span>
-                <span class="reporter-method-output">Naviated to create new link</span>
-                <span class="reporter-method-output">Naviated to last name</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
@@ -304,48 +320,48 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">satteliteInfo.ContactTests.TC_01Test</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">satteliteInfo.OrganizationTests.TC_06Test</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">bsConfig</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">bcConfig</span>
-                <span class="method-start">915 ms</span>
+                <span class="method-start">36 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">bmConfig</span>
-                <span class="method-start">9439 ms</span>
+                <span class="method-start">10187 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TC_01</span>
-                <span class="method-start">13457 ms</span>
+                <span class="method-name">TC_06Test</span>
+                <span class="method-start">17475 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">amConfig</span>
-                <span class="method-start">26708 ms</span>
+                <span class="method-start">68602 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">bmConfig</span>
-                <span class="method-start">28586 ms</span>
+                <span class="method-start">73327 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">demoTest</span>
-                <span class="method-start">31293 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">amConfig</span>
-                <span class="method-start">31297 ms</span>
+                <span class="method-start">80154 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">demoTC_06</span>
+                <span class="method-start">80154 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">acConfig</span>
-                <span class="method-start">36638 ms</span>
+                <span class="method-start">86477 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">asConfig</span>
-                <span class="method-start">37908 ms</span>
+                <span class="method-start">90998 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

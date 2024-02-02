@@ -14,19 +14,21 @@ import SatteliteInfo.ObjectRepository.OrganizationPage;
 
 public class TC_05Test extends BaseClass {
 
-	@Test(dataProvider = "OrgWithIndustry")
+	@Test(groups= {"regionalRegression"},dataProvider = "OrgWithIndustry")
 	
 	public void TC_04Test(String ORGNAME1, String INDUSTRY) throws EncryptedDocumentException, IOException {
 		
 		String ORGNAME = ORGNAME1+ jUtil.getRandomNumber();
 
 		HomePage hp = new HomePage(driver);
+		wUtil.waitForElementToBeVisisble(driver, hp.getOrganizationsLnk());
 		hp.getOrganizationsLnk().click();
 
-		wUtil.waitForPageLoad(driver);
-		
 		OrganizationPage cop = new OrganizationPage(driver);
-		wUtil.waitForPageLoad(driver);
+		
+		wUtil.waitForElementToBeClickabale(driver, cop.getCreateOrganizationsIcon());
+		wUtil.waitForElementToBeVisisble(driver, cop.getCreateOrganizationsIcon());
+		
 		cop.getCreateOrganizationsIcon().click();
 
 		CreateNewOrganisationPage cnop = new CreateNewOrganisationPage(driver);
@@ -49,4 +51,10 @@ public class TC_05Test extends BaseClass {
 		Object [][] data=eUtil.readDataFromExcelToDataProvider("DataProviderOrg");
 		return data;
 	}
+	
+	@Test()
+	public void demoTest04() {
+		System.out.println("Hey i want to print TC04");
+	}
+	
 }
