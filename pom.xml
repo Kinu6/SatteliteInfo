@@ -16,7 +16,9 @@
 		<version>1.18.30</version>
 		<scope>provided</scope>
 	</dependency>
-	 
+ 
+ <dependencies>
+
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>
     <groupId>mysql</groupId>
