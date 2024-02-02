@@ -11,7 +11,6 @@
           <include name="bsConfig"/>
           <include name="bmConfig"/>
           <include name="TC_06Test"/>
-          <include name="demoTC_06"/>
           <include name="acConfig"/>
         </methods>
       </class> <!-- satteliteInfo.OrganizationTests.TC_06Test -->

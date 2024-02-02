@@ -46,24 +46,27 @@ public class BaseClass {
 	@BeforeTest */ 
 	
 	@BeforeClass(groups={"smokeSuite","regionalRegression"})
-    public void bcConfig(/*String BROWSER*/) throws IOException {
+    
+	public void bcConfig(/*String BROWSER*/) throws IOException {
 		String URL = pUtil.readDataFromPropertyFile("url");
 		String BROWSER = pUtil.readDataFromPropertyFile("browser");
 
 		// Step 3: Launch the Browser - RUNTIME POLYMORPHISM
-		if (BROWSER.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
-
-			System.out.println("--- " + BROWSER + " launched ---");
-
-		} else if (BROWSER.equalsIgnoreCase("firefox")) {
+		 if (BROWSER.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 
 			System.out.println("--- " + BROWSER + " launched ---");
 
-		} else {
+		} 
+		 else if(BROWSER.equalsIgnoreCase("edge")) {
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
+
+				System.out.println("--- " + BROWSER + " launched ---");
+
+			}
+		 else {
 			System.out.println("invalid browser name");
 		}
 		sDriver = driver;// For Listeners

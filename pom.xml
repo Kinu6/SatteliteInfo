@@ -87,7 +87,7 @@
 						<version>3.2.5</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>testngSS31.xml</suiteXmlFile>
+								<suiteXmlFile>testng_Smoke02.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>

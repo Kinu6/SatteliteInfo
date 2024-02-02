@@ -12,7 +12,7 @@ import SatteliteInfo.ObjectRepository.HomePage;
 
 public class TC_03Test extends BaseClass {
 
-	@Test ()
+	@Test (groups = "smokeSuite")
 	public void TC_03Test() throws IOException, InterruptedException {
 
 		String LASTNAME = eUtil.readDataFromExcelSheet("Contact", 7, 2);

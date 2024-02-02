@@ -12,6 +12,7 @@ import SatteliteInfo.ObjectRepository.OrganizationInfoPage;
 import SatteliteInfo.ObjectRepository.OrganizationPage;
 
 public class TC_06Test extends BaseClass {
+	
 	@Test(groups = "smokeSuite")
 	public void TC_06Test() throws IOException {
 
