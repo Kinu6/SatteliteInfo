@@ -25,7 +25,7 @@ public class TC_01Test extends BaseClass {
         
 		Thread.sleep(2000);
 		
-		Reporter.log("Naviated tocontacts link");
+		Reporter.log("Naviatd tocontacts link");
 		ContactsPage ccp = new ContactsPage(driver);
 		wUtil.waitForElementToBeVisisble(driver, ccp.getCreateNewIcon());;
 		wUtil.waitForElementToBeClickabale(driver, ccp.getCreateNewIcon());
