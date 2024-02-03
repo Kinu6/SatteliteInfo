@@ -15,7 +15,7 @@ import SatteliteInfo.ObjectRepository.HomePage;
 
 public class TC_01Test extends BaseClass {
 	
-	@Test()
+	@Test(groups = "SmokeSuite")
 	public void TC_01() throws IOException, InterruptedException {
 
 		String LASTNAME = eUtil.readDataFromExcelSheet("Contact", 1, 2);
