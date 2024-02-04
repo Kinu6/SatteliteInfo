@@ -11,8 +11,6 @@ import SatteliteInfo.ObjectRepository.ContactsPage;
 import SatteliteInfo.ObjectRepository.CreateNewContactPage;
 import SatteliteInfo.ObjectRepository.HomePage;
 
-@Listeners(SatteliteInfo.GenericUtilities.ListernersImplementation.class)
-
 public class TC_01Test extends BaseClass {
 	
 
